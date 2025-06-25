@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Foreign Policy: A Tale of Two Interventions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #2CC9EA;
+        }
+        .kpi-value {
+            font-weight: 900;
+            color: #0A41C9;
+        }
+        .kpi-label {
+            font-weight: 600;
+            color: #052473;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-[#052473]">Hegemony & Humility</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">An analysis of success and failure in modern U.S. foreign policy, dissecting two landmark interventions to understand the paradox of American power.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="marshall-plan" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#052473]">Part I: The Marshall Plan — A Case Study in Strategic Success</h2>
+                <p class="mt-2 text-md text-gray-600 max-w-3xl mx-auto">Following World War II, Europe lay in ruins. The Marshall Plan was a pragmatic and collaborative effort to rebuild the continent, aligning U.S. interests with European needs to foster unprecedented recovery and cooperation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
+                    <span class="kpi-value text-5xl">$13.3 Billion</span>
+                    <span class="kpi-label text-xl mt-2">Total Aid (1948-1952)</span>
+                    <p class="text-sm text-gray-500 mt-2">(Equivalent to over $150 Billion today)</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 md:col-span-2">
+                    <h3 class="text-xl font-bold text-center text-[#052473]">Top Recipients of Marshall Plan Aid</h3>
+                    <p class="text-sm text-center text-gray-500 mb-4">Aid was strategically weighted toward major industrial powers whose recovery was key to reviving the entire continent.</p>
+                    <div class="chart-container mx-auto" style="height: 300px;">
+                        <canvas id="marshallAidChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 lg:col-span-3">
+                    <h3 class="text-xl font-bold text-center text-[#052473]">The Engine of Recovery: European Industrial Production</h3>
+                     <p class="text-sm text-center text-gray-500 mb-4">The plan's "critical margin" of capital and materials fueled a stunning economic resurgence across Western Europe.</p>
+                    <div class="chart-container mx-auto h-[350px]">
+                        <canvas id="industrialProductionChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 lg:col-span-3">
+                     <h3 class="text-xl font-bold text-center text-[#052473]">A Blueprint for Collaboration</h3>
+                     <p class="text-sm text-center text-gray-500 mb-6">The U.S. insisted that European nations take the initiative, fostering cooperation and a sense of ownership over their collective recovery.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                        <div class="p-4 bg-blue-50 border-2 border-[#A8D9F8] rounded-lg">
+                            <p class="font-bold">U.S. Proposes Aid</p>
+                            <p class="text-xs">Based on need, not doctrine</p>
+                        </div>
+                        <div class="flowchart-arrow">→</div>
+                        <div class="p-4 bg-blue-50 border-2 border-[#A8D9F8] rounded-lg">
+                            <p class="font-bold">Europeans Cooperate</p>
+                            <p class="text-xs">Form OEEC to create joint plan</p>
+                        </div>
+                        <div class="flowchart-arrow">→</div>
+                        <div class="p-4 bg-blue-50 border-2 border-[#A8D9F8] rounded-lg">
+                            <p class="font-bold">U.S. Funds & Supports</p>
+                            <p class="text-xs">ECA provides capital & expertise</p>
+                        </div>
+                        <div class="flowchart-arrow">→</div>
+                        <div class="p-4 bg-green-100 border-2 border-green-300 rounded-lg">
+                            <p class="font-bold">Economic & Political Stability</p>
+                            <p class="text-xs">Foundation for modern Europe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-12 border-t-2 border-gray-300">
+
+        <section id="iraq-war" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-red-800">Part II: The 2003 Iraq Invasion — A Case Study in Strategic Failure</h2>
+                <p class="mt-2 text-md text-gray-600 max-w-3xl mx-auto">In the shadow of 9/11, the U.S. launched a preemptive war based on flawed intelligence and ideological hubris. The result was not a beacon of democracy, but a cascade of instability, violence, and unintended consequences.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                 <div class="bg-white rounded-lg shadow-lg p-6 lg:col-span-3">
+                    <h3 class="text-xl font-bold text-center text-red-800">Projected vs. Actual Financial Cost</h3>
+                    <p class="text-sm text-center text-gray-500 mb-4">Initial White House estimates were off by orders of magnitude, failing to account for a protracted insurgency and reconstruction.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="chart-container mx-auto" style="height: 300px;">
+                            <canvas id="iraqCostChart"></canvas>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-gray-600 text-2xl font-semibold">Total Cost Through 2050</span>
+                            <span class="kpi-value text-red-600 text-6xl block my-2">$2.89+ Trillion</span>
+                            <span class="kpi-label text-red-800 text-2xl">And Counting</span>
+                            <p class="text-xs text-gray-500 mt-2">Source: Costs of War Project, Brown University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 md:col-span-2">
+                    <h3 class="text-xl font-bold text-center text-red-800">The Descent into Chaos: Direct War Deaths in Iraq</h3>
+                     <p class="text-sm text-center text-gray-500 mb-4">The collapse of the state and disastrous post-war policies ignited a brutal sectarian civil war, with violence peaking in 2006-2007.</p>
+                    <div class="chart-container mx-auto h-[350px]">
+                        <canvas id="iraqViolenceChart"></canvas>
+                    </div>
+                </div>
+                
+                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
+                    <span class="kpi-value text-red-600 text-5xl">550k-580k</span>
+                    <span class="kpi-label text-red-800 text-xl mt-2">Direct Deaths</span>
+                    <p class="text-sm text-gray-500 mt-2">Civilians, fighters, police, journalists & aid workers (2003-2023). Indirect deaths are several times higher.</p>
+                    <p class="text-xs text-gray-500 mt-4">Source: Costs of War Project</p>
+                </div>
+                
+                 <div class="bg-white rounded-lg shadow-lg p-6 lg:col-span-3">
+                     <h3 class="text-xl font-bold text-center text-red-800">A Blueprint for Catastrophe</h3>
+                     <p class="text-sm text-center text-gray-500 mb-6">A series of disastrous, unilateral decisions made without local input created a power vacuum that was filled by insurgents and extremists.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                        <div class="p-4 bg-red-50 border-2 border-red-200 rounded-lg">
+                            <p class="font-bold">Invasion & Regime Change</p>
+                            <p class="text-xs">Based on flawed WMD intelligence</p>
+                        </div>
+                        <div class="flowchart-arrow text-red-400">→</div>
+                        <div class="p-4 bg-red-50 border-2 border-red-200 rounded-lg">
+                            <p class="font-bold">CPA Decrees Issued</p>
+                            <p class="text-xs">De-Ba'athification & Army Disbanded</p>
+                        </div>
+                        <div class="flowchart-arrow text-red-400">→</div>
+                        <div class="p-4 bg-red-50 border-2 border-red-200 rounded-lg">
+                            <p class="font-bold">Power Vacuum & Insurgency</p>
+                            <p class="text-xs">Sunni disenfranchisement fuels conflict</p>
+                        </div>
+                        <div class="flowchart-arrow text-red-400">→</div>
+                        <div class="p-4 bg-red-200 border-2 border-red-400 rounded-lg">
+                            <p class="font-bold">Sectarian War & Rise of ISIS</p>
+                            <p class="text-xs">Regional destabilization</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <hr class="my-12 border-t-2 border-gray-300">
+        
+        <section id="comparison" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-[#052473]">A Tale of Two Policies: Comparative Analysis</h2>
+                <p class="mt-2 text-md text-gray-600 max-w-3xl mx-auto">The outcomes of these interventions were not accidental. They were the direct result of their foundational principles, strategic approaches, and methods of implementation.</p>
+            </div>
+            <div class="overflow-x-auto bg-white rounded-lg shadow-lg p-4">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metric</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-blue-600 uppercase tracking-wider">The Marshall Plan (Success)</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-red-600 uppercase tracking-wider">The 2003 Iraq Invasion (Failure)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 font-semibold">Approach</td>
+                            <td class="px-6 py-4">Collaborative & Aligning</td>
+                            <td class="px-6 py-4">Unilateral & Imposing</td>
+                        </tr>
+                         <tr class="bg-gray-50">
+                            <td class="px-6 py-4 font-semibold">Justification</td>
+                            <td class="px-6 py-4">Pragmatic (Economic Collapse)</td>
+                            <td class="px-6 py-4">Ideological (Flawed Intelligence)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold">International Support</td>
+                            <td class="px-6 py-4">High (Multilateral Consensus)</td>
+                            <td class="px-6 py-4">Low ("Coalition of the Willing")</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="px-6 py-4 font-semibold">Core Tactic</td>
+                            <td class="px-6 py-4">Economic Aid (Grants)</td>
+                            <td class="px-6 py-4">Preemptive Military Force</td>
+                        </tr>
+                         <tr>
+                            <td class="px-6 py-4 font-semibold">Local Ownership</td>
+                            <td class="px-6 py-4">High (European-led plans)</td>
+                            <td class="px-6 py-4">None (Top-down CPA decrees)</td>
+                        </tr>
+                         <tr class="bg-gray-50">
+                            <td class="px-6 py-4 font-semibold">Primary Outcome</td>
+                            <td class="px-6 py-4">Stable Alliances, EU Precursor</td>
+                            <td class="px-6 py-4">Regional Destabilization, Rise of ISIS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-[#052473] text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <h2 class="text-2xl font-bold">Enduring Lessons</h2>
+            <p class="mt-4 max-w-4xl mx-auto">The most critical component of American power is not its military or its economy, but its judgment. The ability to distinguish between moments that call for the patient, collaborative spirit of the Marshall Plan and those that tempt the unilateral overreach of the Iraq invasion remains the single most important challenge for American statecraft in the 21st century.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const palette = {
+                blue: '#0A41C9',
+                cyan: '#2CC9EA',
+                lightBlue: '#A8D9F8',
+                darkBlue: '#052473',
+                red: '#DC2626',
+                lightRed: '#F87171'
+            };
+
+            function wrapLabel(str, maxWidth) {
+                if (str.length <= maxWidth) {
+                    return str;
+                }
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            }
+
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            };
+
+            const marshallAidCtx = document.getElementById('marshallAidChart').getContext('2d');
+            new Chart(marshallAidCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['United Kingdom', 'France', 'West Germany', 'Italy', 'Netherlands'],
+                    datasets: [{
+                        label: 'Aid Received (in Billions of USD)',
+                        data: [3.4, 2.7, 1.4, 1.5, 1.1],
+                        backgroundColor: [palette.blue, palette.cyan, palette.lightBlue, palette.darkBlue, '#60A5FA'],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    ...tooltipTitleCallback,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                     scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Billions of USD (Nominal)' }
+                        }
+                    }
+                }
+            });
+
+            const industrialProductionCtx = document.getElementById('industrialProductionChart').getContext('2d');
+            new Chart(industrialProductionCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Pre-War (1938)', '1947', '1948', '1949', '1950', '1951', '1952'],
+                    datasets: [{
+                        label: 'Western Europe Industrial Production Index',
+                        data: [100, 87, 101, 112, 126, 138, 142],
+                        fill: true,
+                        backgroundColor: 'rgba(10, 65, 201, 0.2)',
+                        borderColor: palette.blue,
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    ...tooltipTitleCallback,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            title: { display: true, text: 'Index (1938 = 100)' }
+                        }
+                    }
+                }
+            });
+
+            const iraqCostCtx = document.getElementById('iraqCostChart').getContext('2d');
+            new Chart(iraqCostCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Initial White House Projection', wrapLabel('Actual & Obligated Cost', 16)],
+                    datasets: [{
+                        label: 'Cost (in Billions of USD)',
+                        data: [60, 2890],
+                        backgroundColor: [palette.lightRed, palette.red],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    ...tooltipTitleCallback,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'logarithmic',
+                            beginAtZero: true,
+                            title: { display: true, text: 'Billions of USD (Log Scale)' }
+                        }
+                    }
+                }
+            });
+            
+            const iraqViolenceCtx = document.getElementById('iraqViolenceChart').getContext('2d');
+            new Chart(iraqViolenceCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011'],
+                    datasets: [{
+                        label: 'Direct War Deaths (Civilians, Combatants, etc.)',
+                        data: [13000, 26000, 27000, 34000, 30000, 14000, 7000, 5000, 4500],
+                        fill: true,
+                        backgroundColor: 'rgba(220, 38, 38, 0.2)',
+                        borderColor: palette.red,
+                        tension: 0.3
+                    }]
+                },
+                 options: {
+                    ...tooltipTitleCallback,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                             title: { display: true, text: 'Estimated Annual Deaths' }
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
